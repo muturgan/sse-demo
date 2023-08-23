@@ -1,0 +1,40 @@
+{
+  "name": "sse-demo",
+  "version": "1.0.0",
+  "description": "Демонстрация технологии Server-Sent Events в рамках задачи BF-612",
+  "author": "Andrey Sakharov <caxap_8787@mail.ru> (https://www.linkedin.com/in/andrey-sakharov/)",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prebuild": "rm -rf dist || rimraf dist",
+		"start": "npm run build && node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muturgan/sse-demo.git"
+  },
+  "keywords": [
+    "sse"
+  ],
+  "bugs": {
+    "url": "https://github.com/muturgan/sse-demo/issues"
+  },
+  "homepage": "https://github.com/muturgan/sse-demo#readme",
+  "dependencies": {
+    "@fastify/static": "^6.10.2",
+    "@nestjs/common": "^9.4.3",
+    "@nestjs/core": "^9.4.3",
+    "@nestjs/platform-fastify": "^9.4.3",
+    "@nestjs/serve-static": "^4.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.18.55",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
+  }
+}
