@@ -1,8 +1,8 @@
 import { Controller, Get, Headers, Res, Sse } from '@nestjs/common';
-import { Observable } from 'rxjs';
 import { FastifyReply } from 'fastify';
-import { MyEvent } from './my-event';
-import { SseService } from './sse.service';
+import { Observable } from 'rxjs';
+import { MyEvent } from './my-event.js';
+import { SseService } from './sse.service.js';
 
 @Controller('sse')
 export class SseController {

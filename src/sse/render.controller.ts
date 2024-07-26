@@ -1,5 +1,5 @@
 import { Body, Controller, Headers, Post } from '@nestjs/common';
-import { SseService } from './sse.service';
+import { SseService } from './sse.service.js';
 
 @Controller('api')
 export class RenderController {

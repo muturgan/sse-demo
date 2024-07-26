@@ -1,8 +1,8 @@
+import { ServerResponse } from 'node:http';
 import { Injectable } from '@nestjs/common';
 import { Observable, Subject, filter, map } from 'rxjs';
-import { HeartBeatEvent, MyEvent, RenderedEvent } from './my-event';
-import { ServerResponse } from 'http';
-import { delay, getRandomInt } from '../utils';
+import { HeartBeatEvent, MyEvent, RenderedEvent } from './my-event.js';
+import { delay, getRandomInt } from '../utils/index.js';
 
 // можно и на EventEmitter, но у нас же всё равно установлен rxjs
 const eventSubject = new Subject<MyEvent>();

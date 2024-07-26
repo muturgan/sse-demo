@@ -1,4 +1,6 @@
-export const delay = (milliseconds: number) => new Promise((r) => setTimeout(r, milliseconds));
+import { setTimeout as asyncTimeout } from 'node:timers/promises';
+
+export const delay = (milliseconds: number) => asyncTimeout(milliseconds, undefined as void, {ref: false});
 
 export const getRandomInt = (minimum: number, maximum: number): number => {
 	const min = Math.ceil(minimum);

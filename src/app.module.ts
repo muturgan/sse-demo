@@ -1,10 +1,10 @@
-import { join } from 'path';
+import { join } from 'node:path';
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import { FilesController } from './files.controller';
-import { RenderController } from './sse/render.controller';
-import { SseController } from './sse/sse.controller';
-import { SseService } from './sse/sse.service';
+import { FilesController } from './files.controller.js';
+import { RenderController } from './sse/render.controller.js';
+import { SseController } from './sse/sse.controller.js';
+import { SseService } from './sse/sse.service.js';
 
 @Module({
    imports: [

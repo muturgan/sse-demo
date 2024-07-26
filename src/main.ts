@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 
-import { AppModule } from './app.module';
+import { AppModule } from './app.module.js';
 
 const APP_PORT = 8888;
 const APP_HOST = '127.0.0.1';

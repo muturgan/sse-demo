@@ -4,11 +4,15 @@
   "description": "Демонстрация технологии Server-Sent Events в рамках задачи BF-612",
   "author": "Andrey Sakharov <caxap_8787@mail.ru> (https://www.linkedin.com/in/andrey-sakharov/)",
   "license": "MIT",
-  "main": "index.js",
+  "type": "module",
+  "exports": "./dist/main.js",
   "scripts": {
     "build": "tsc",
-    "prebuild": "rm -rf dist || rimraf dist",
-		"start": "npm run build && node dist/main.js"
+    "prebuild": "rm -rf dist || npx rimraf dist",
+    "start": "npm run build && node dist/main.js"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "repository": {
     "type": "git",
@@ -22,19 +26,18 @@
   },
   "homepage": "https://github.com/muturgan/sse-demo#readme",
   "dependencies": {
-    "@fastify/static": "^6.10.2",
-    "@nestjs/common": "^9.4.3",
-    "@nestjs/core": "^9.4.3",
-    "@nestjs/platform-fastify": "^9.4.3",
-    "@nestjs/serve-static": "^4.0.0",
+    "@fastify/static": "^7.0.4",
+    "@nestjs/common": "^10.3.10",
+    "@nestjs/core": "^10.3.10",
+    "@nestjs/platform-fastify": "^10.3.10",
+    "@nestjs/serve-static": "^4.0.2",
     "class-transformer": "^0.5.1",
-    "class-validator": "^0.14.0",
-    "reflect-metadata": "^0.1.13",
+    "class-validator": "^0.14.1",
+    "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "@types/node": "^14.18.55",
-    "rimraf": "^5.0.1",
-    "typescript": "^5.1.6"
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4"
   }
 }

@@ -38,7 +38,6 @@ document.addEventListener(
 
 				if (idColumn.textContent === bunnerId) {
 					console.log({status});
-					console.log(statusColumn);
 
 					const newTd = document.createElement('td');
 					newTd.textContent = status;
